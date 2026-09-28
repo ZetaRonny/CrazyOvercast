@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import index from '../views/index.vue'
-import log from '../views/log.vue'
+import index from '@/views/index.vue'
+import log from '@/views/log.vue'
 
 const routes = [
   {
@@ -11,7 +11,7 @@ const routes = [
   {
     path: '/log',
     name: 'log',
-    component: () => import('../views/log.vue'),
+    component: log,
   },
 
 ]
