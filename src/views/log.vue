@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import Pagination from '@/components/pagination.vue'
-import { getDevLogs } from '@/services/devLogs'
+import { getDevLogs } from '@/services/devlogs'
 
 const logs = ref([])
 const currentPage = ref(1)
