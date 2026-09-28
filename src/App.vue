@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import index from './views/index.vue'
 import appFooter from './components/appFooter.vue'
 import appHeader from './components/appHeader.vue'
