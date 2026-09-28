@@ -2,7 +2,7 @@
   <header class="site-header">
     <div class="logo-container">
       <RouterLink to="/">
-        <img src="@/assets/co_icon.png" alt="Site Logo" class="logo" />
+        <span></span>
       </RouterLink>
     </div>
    <div class="title">
