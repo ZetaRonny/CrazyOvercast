@@ -1,0 +1,119 @@
+  body {
+  margin: 0;
+  overflow-x: hidden; /* Prevents horizontal scroll from hidden menu */
+}
+
+.title{
+  color: #1A1A1A;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 500;
+  font-size: 30pt;
+  text-align: center;
+        
+}
+
+.wrapper{
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 15% 1fr 15%;
+  align-items: center;
+  align-content: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.centered-text{
+  text-align: center;
+  height:100%
+ 
+}
+
+/* Hide the actual checkbox checkbox completely */
+.menu-toggle {
+  display: none;
+}
+
+/* --- Hamburger Button Styling --- */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 100; /* Keeps button above the sliding drawer */
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out; /* Smooth transition for animations */
+}
+
+/* --- Menu Drawer Styling --- */
+.menu-drawer {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Initially hidden off-screen to the right */
+  width: 300px;
+  height: 100vh;
+  background-color: #e9e9e9;
+  padding-top: 80px;
+  transition: transform 0.4s ease-in-out; /* Smooth slide-out movement */
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.menu-drawer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-drawer ul li a {
+  display: block;
+  padding: 15px 30px;
+  color: #1A1A1A;;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.2s;
+}
+
+.menu-drawer ul li a:hover {
+  background-color: #bdbdbd;
+}
+
+/* --- The CSS Magic (State Modifications) --- */
+
+/* 1. Slide the menu in when checkbox is checked */
+.menu-toggle:checked ~ .menu-drawer {
+  transform: translateX(-300px); /* Moves drawer left into view */
+}
+
+/* 2. Animate hamburger lines into an "X" when checked */
+.menu-toggle:checked ~ .hamburger span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle:checked ~ .hamburger span:nth-child(2) {
+  opacity: 0; /* Hides middle bar */
+}
+
+.menu-toggle:checked ~ .hamburger span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+
+@media (max-width: 862px) {
+
+  .menu-drawer {
+  right: -300px; /* Initially hidden off-screen to the right */
+  width: 225px;
+}
+}

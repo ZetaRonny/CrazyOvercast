@@ -13,6 +13,9 @@ function onPageUpdate(page) {
   // Trigger your API fetch request or filter array records here
 }
 </script>
+<style>
+@import "@/assets/css/main.css";
+</style>
 
 <template>
   <div class="app-layout">
@@ -26,32 +29,3 @@ function onPageUpdate(page) {
     <appFooter class="app-footer" />
   </div>
 </template>
-<style scoped>
-.app-layout {
-  display: grid;
-  /* 
-    auto: Header scales to its content
-    1fr: Main expands to fill all available space 
-    auto: Footer scales to its content
-  */
-  grid-template-rows: auto 1fr auto;
-  
-  /* Forces the wrapper to take up at least the full screen height */
-  min-height: 100vh; 
-}
-
-.app-header {
-  padding: 1rem;
-}
-
-.app-content {
-  padding: 1rem;
-}
-
-.app-footer {
-  background-color: #343a40;
-  color: white;
-}
-
-
-</style>
