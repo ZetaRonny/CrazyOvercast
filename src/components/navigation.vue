@@ -25,7 +25,7 @@
     <div class="menu-drawer">
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="about">About</a></li>
         <li><a href="log">Dev Log</a></li>
       </ul>
     </div>
