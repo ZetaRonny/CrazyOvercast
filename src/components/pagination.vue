@@ -1,3 +1,24 @@
+<script setup>
+const props = defineProps({
+  currentPage: {
+    type: Number,
+    required: true
+  },
+  totalPages: {
+    type: Number,
+    required: true
+  }
+})
+
+const emit = defineEmits(['page-change'])
+
+const changePage = (newPage) => {
+  if (newPage >= 1 && newPage <= props.totalPages) {
+    emit('page-change', newPage)
+  }
+}
+</script>
+
 <template>
   <div class="container">
     <div class="pagination-wrapper">
@@ -23,54 +44,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-const props = defineProps({
-  currentPage: {
-    type: Number,
-    required: true
-  },
-  totalPages: {
-    type: Number,
-    required: true
-  }
-})
-
-const emit = defineEmits(['page-change'])
-
-const changePage = (newPage) => {
-  if (newPage >= 1 && newPage <= props.totalPages) {
-    emit('page-change', newPage)
-  }
-}
-</script>
-
-<style scoped>
-.pagination-wrapper {
-  align-items: center;
-  grid-template-columns: 1fr;
-}
-
-button {
-  padding: 3px 6px;
-  cursor: pointer;
-}
-
-button:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.container {
-  display: grid;
-  margin: 0;
-  align-content: center;
-  place-items: center;
-}
-
-.pagination-content {
-  display: grid;
-  grid-template-columns: 30% 30% 30%;
-  gap: 2rem;
-}
-</style>
