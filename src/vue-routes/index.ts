@@ -14,7 +14,7 @@ const routes = [
     name: 'log',
     component: log,
   },
-    {
+  {
     path: '/about',
     name: 'about',
     component: about,
