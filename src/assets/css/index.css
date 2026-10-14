@@ -74,6 +74,35 @@ h3 {
   font-weight: 500;
 }
 
+v  .looming-project {
+    padding:0.5rem;
+  }
+
+  .looming-title
+  {
+    font-size: 20pt;
+    color: #333131;
+    font-weight: 500;
+  }
+
+  .clearspace-sm{
+     padding-bottom: 0.25rem;
+  }
+ 
+  .looming-header{
+    font-size: 22pt;
+    padding-bottom:1rem;
+    
+  }
+
+  .looming-subtitle{
+    padding-top: 0.5rem;
+  }
+
+
+
+
+
 @media (min-width: 1024px) {
   .item {
     margin-top: 0;
